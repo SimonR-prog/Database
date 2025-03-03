@@ -23,6 +23,7 @@
     <Folder Include="Contexts\" />
     <Folder Include="Entities\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Data\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 
