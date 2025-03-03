@@ -14,13 +14,9 @@ public class DataContext : DbContext
 
     public virtual DbSet<ProjectEntity> Projects { get; set; }
     public virtual DbSet<StatusEntity> Statuses { get; set; }
-    public virtual DbSet<EmployeeEntity> Employees { get; set; }
-    public virtual DbSet<ClientEntity> Clients { get; set; }
-    public virtual DbSet<ProductEntity> Products { get; set; }
-    public virtual DbSet<ProjectSchedulesEntity> ProjectSchedules { get; set; }
-    public virtual DbSet<ProjectTimeLogEntity> ProjectTimeLogs { get; set; }
-    public virtual DbSet<ProjectTypeEntity> ProjectTypes { get; set; }
-    public virtual DbSet<RoleEntity> RoleTypes { get; set; }
     public virtual DbSet<UserEntity> Users { get; set; }
 
+    public virtual DbSet<CityEntity> City { get; set; }
+    public virtual DbSet<CustomerEntity> Customer { get; set; }
+    public virtual DbSet<LocationEntity> Location { get; set; }
 }
