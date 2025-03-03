@@ -1,12 +1,16 @@
-﻿namespace Data.Entities;
+﻿using Microsoft.EntityFrameworkCore;
 
+namespace Data.Entities;
+
+[Index(nameof(Email), IsUnique = true)]
 public class UserEntity
 {
     public int Id { get; set; }
-    public EmployeeEntity Employee { get; set; } = null!;
-    public string Password { get; set; } = null!;
-    public string SaltKey { get; set; } = null!;
+    public string FirstName { get; set; } = null!;
+    public string LastName { get; set; } = null!;
+    public string Email { get; set; } = null!;
+    public DateTime Created { get; set; }
 
-    public int RoleId { get; set; }
-    public RoleEntity Role { get; set; } = null!;
+    public int CustomerId { get; set; }
+    public CustomerEntity Customer { get; set; } = null!;
 }
