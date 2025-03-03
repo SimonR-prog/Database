@@ -20,9 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contexts\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Response_Handler\Response_Handler.csproj" />
   </ItemGroup>
 
 </Project>
