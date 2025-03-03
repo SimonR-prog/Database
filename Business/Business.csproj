@@ -13,4 +13,9 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Response_Handler\Response_Handler.csproj" />
+  </ItemGroup>
+
 </Project>
