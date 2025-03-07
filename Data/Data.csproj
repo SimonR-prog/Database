@@ -20,11 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Databases\" />
+    <ProjectReference Include="..\Response_Handler\Response_Handler.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Response_Handler\Response_Handler.csproj" />
+    <Folder Include="Database\" />
   </ItemGroup>
 
 </Project>

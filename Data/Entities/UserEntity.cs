@@ -11,6 +11,8 @@ public class UserEntity
     public string Email { get; set; } = null!;
     public DateTime Created { get; set; }
 
+    public ICollection<ProjectUserEntity> ProjectUsers { get; set; } = [];
+
     public int CustomerId { get; set; }
     public CustomerEntity Customer { get; set; } = null!;
 }
