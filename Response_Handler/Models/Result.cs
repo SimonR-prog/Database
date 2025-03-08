@@ -30,7 +30,7 @@ public abstract class Result : IResult
     }
 
 }
-public class Result<T> : Result
+public class Result<T> : Result, IResultContent<T>
 {
     public T? Content { get; private set; }
     public static Result<T> Ok(T? content)
@@ -40,6 +40,18 @@ public class Result<T> : Result
             Success = true,
             StatusCode = 200,
             Content = content
+        };
+    }
+
+    // Gotten from chatgpt to be able to return an empty list when getting entities from the database.
+    public static Result<T> Error(T? content, string message)
+    {
+        return new Result<T>
+        {
+            Success = false,
+            StatusCode = 500,
+            Content = content,
+            ErrorMessage = message
         };
     }
 }
