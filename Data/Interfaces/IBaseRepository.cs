@@ -1,13 +1,14 @@
-﻿using System.Linq.Expressions;
+﻿using Response_Handler.Interfaces;
+using System.Linq.Expressions;
 
 namespace Data.Interfaces;
 
 public interface IBaseRepository<TEntity> where TEntity : class
 {
-    Task<bool> CreateAsync(TEntity entity);
-    Task<IEnumerable<TEntity>?> GetAllAsync();
-    Task<TEntity?> GetAsync(Expression<Func<TEntity, bool>> predicate);
-    Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate);
-    Task<bool> UpdateAsync(TEntity entity);
-    Task<bool> DeleteAsync(TEntity entity);
+    Task<IResult> CreateAsync(TEntity entity);
+    Task<IResultContent<IEnumerable<TEntity>>> GetAllAsync();
+    Task<IResultContent<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate);
+    Task<IResult> ExistsAsync(Expression<Func<TEntity, bool>> predicate);
+    Task<IResult> UpdateAsync(TEntity entity);
+    Task<IResult> DeleteAsync(TEntity entity);
 }
